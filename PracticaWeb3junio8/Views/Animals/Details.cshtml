@@ -1,0 +1,42 @@
+﻿@model PracticaWeb3junio8.Models.Animal
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Animal</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NombreEspecie)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NombreEspecie)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PesoPromedio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PesoPromedio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.EdadPromedio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EdadPromedio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.IdTipoAnimalNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.IdTipoAnimalNavigation.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.IdAnimal">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

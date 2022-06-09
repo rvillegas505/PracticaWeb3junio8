@@ -1,0 +1,15 @@
+﻿@model List<Animal>
+
+@{
+    ViewData["Title"] = "Lista de animales";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Animales</h1>
+    @foreach (var animal in Model)
+    {
+        <p>@animal.NombreEspecie</p>
+        
+    }
+</div>
+
